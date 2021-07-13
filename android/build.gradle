@@ -14,6 +14,7 @@ plugins {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
@@ -79,4 +80,6 @@ dependencies {
     implementation "androidx.annotation:annotation:$androidXAnnotation"
     implementation "androidx.browser:browser:$androidXBrowser"
   }
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
